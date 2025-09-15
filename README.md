@@ -10,7 +10,7 @@ The objective of this project is to use LLM(Large Language Models) to have an AI
 ![Data_Analysis_App](Assets/product_category_month.png)
 *Data Analysis Application for Coffee Shop*
 
-#Tool Used
+# Tool Used
 - **Python (Pandas, Tkinter, Matplotlib, Numpy):** Data manipulation, data entry application, and data visualization.
 - **Pycharm:** Execution enviroment
 - **ChatGPT and Claude:** Large Language Models (LLMs) used to generate python script for the prototype.
