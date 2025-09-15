@@ -3,11 +3,11 @@ This project analyzes the coffee shop sales in the year 2023 with 3 different st
 
 The objective of this project is to use LLM(Large Language Models) to have an AI-assisted coding to excute the data analysis and to identify the top selling product and top sales store. The analysis will also help to identify the problem per store locations and may use the strategy of top store to enhance or boost the sales of the other stores.
 
-#Dekstop Application
+# Dekstop Application
 ![Data_Entry_App](Assets/data_entry.png)
 *Data Entry Application for Coffee Shop*
 
-![Data_Analysis_App](Assets/product_detail_month)
+![Data_Analysis_App](Assets/product_category_month)
 *Data Analysis Application for Coffee Shop*
 
 #Tool Used
