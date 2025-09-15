@@ -7,7 +7,7 @@ The objective of this project is to use LLM(Large Language Models) to have an AI
 ![Data_Entry_App](Assets/data_entry.png)
 *Data Entry Application for Coffee Shop*
 
-![Data_Analysis_App](Assets/product_category_month)
+![Data_Analysis_App](Assets/product_category_month.png)
 *Data Analysis Application for Coffee Shop*
 
 #Tool Used
@@ -24,7 +24,8 @@ The objective of this project is to use LLM(Large Language Models) to have an AI
 
 
 #Here's the python script use for this project
-##Data Entry Application
+
+## Data Entry Application
 ```python
 import tkinter as tk
 from tkinter import messagebox
@@ -301,7 +302,7 @@ tk.Button(root, text="Show Data Analysis",
 root.mainloop()
 ```
 
-##Sales Dashboard Application
+## Sales Dashboard Application
 ```python
 import tkinter as tk
 import matplotlib.pyplot as plt
