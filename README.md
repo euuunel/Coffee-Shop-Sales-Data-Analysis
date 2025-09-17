@@ -3,29 +3,47 @@ This project analyzes the coffee shop sales in the year 2023 with 3 different st
 
 The objective of this project is to use LLM(Large Language Models) to have an AI-assisted coding to excute the data analysis and to identify the top selling product and top sales store. The analysis will also help to identify the problem per store locations and may use the strategy of top store to enhance or boost the sales of the other stores.
 
-# Dekstop Application
-![Data_Entry_App](Assets/data_entry.png)
-*Data Entry Application for Coffee Shop*
-
-![Data_Analysis_App](Assets/product_category_month.png)
-*Data Analysis Application for Coffee Shop*
-
 # Tools Used
 - **Python (Pandas, Tkinter, Matplotlib, Numpy):** Data manipulation, data entry application, and data visualization.
 - **Pycharm:** Execution enviroment
 - **ChatGPT and Claude:** Large Language Models (LLMs) used to generate python script for the prototype.
 - **Git & GitHub:** Employed for version control, collaboration, and sharing the project in a structured and reproducible format.
 
-  # Analysis Breakdown
+# Dekstop/System Application Overview
+## Data Entry Application for Coffee Shop Sales
+![Data_Entry_App](Assets/data_entry.png)
+Click here to see python script: [Go Down](#data-entry-application)
 
-  ### 1.
+### System Overview
+The system can be use to add new data in the existing database which is collected in the Kaggle-Coffee shop sales. This is a sample system that can be also implemented in any stores or data to avoid adding manually to excel, sql, etc. The user will just put the details and it will automatically store it in the existing database.
+-- **Transaction ID-** will generate a **unique** set of **number** and avoid redundancy in the **existing database**.
+-- **Store Location-** it has a dropdown wherein all three locations are included.
+-- **Product ID-** the **ID number** is the required in the product section. The **product category**, **type** and **detail** will appear once the product ID was inserted *(imagine a menu with existing products in a coffee shop with product ID).*
+-- **Transaction Quantity, Unit Price and Total Bill-** quantity of ordered product, unit price (base on the menu) and total bill. The total bill will calculated based on the Transaction Quantity and Unit price inserted by the user. 
+-- **Save Record-** to add the data to the existing database.
+-- **Show Data Analysis-** will show and pop-up the sales dashboard of the coffeeshop. THe dashboard will use all the existing sales information of the database.
 
-  ## Recommendation
+
+# Data Analysis Application for Coffee Shop Sales
+![Data_Analysis_App](Assets/product_category_month.png)
+Click here to see python script: [Go Down](#sales-dashboard-application)
+
+### System Overview
+This is the Coffee shop sales dashboard. It has 4 KPIs and 3 datagraph (Bar chart, Pie Chart and Trend Line). This is to show the sales in the year 2023 and if there's additional set of data, it will automatically included here in the graph.
+-- **Bar chart-** it has 3 dropdown option to show the sales per product hierarchy (category, type, and detail)
+-- **Pie chart-** to show the sales difference betweens store locations.
+-- **Trend line-** will help to analyze the trend of sales per Month, Days and Hours.
+
+# Analysis Breakdown
+
+### 1.
+
+## Recommendation
 
 
 # Here's the python script use for this project
 
-## Data Entry Application
+## Data Entry Application 
 ```python
 import tkinter as tk
 from tkinter import messagebox
@@ -153,7 +171,7 @@ root.title("Coffee Shop Sales Manager")
 root.geometry("760x250")
 
 #Transaction ID
-tk.Label(root, text="transaction_id:").grid(row=0, column=0, sticky="w", padx=10, pady=5)
+tk.Label(root, text="Transaction ID:").grid(row=0, column=0, sticky="w", padx=10, pady=5)
 transactionID_var = tk.StringVar()
 transactionID_var.set(generate_unique_transaction_id(file_path))  # auto-generate on start
 label_transID = tk.Label(root, textvariable=transactionID_var, bg="lightyellow", font=("Arial", 10, "bold"), width=15)
@@ -242,16 +260,16 @@ def on_store_selected(*args):
 selected_storeLoc.trace("w", on_store_selected)
 
 #Quantity, Unit Price, Total
-tk.Label(root, text="transaction_qty:").grid(row=4, column=0, sticky="w", padx=10, pady=5)
+tk.Label(root, text="Transaction Quantity:").grid(row=4, column=0, sticky="w", padx=10, pady=5)
 entry_qty = tk.Entry(root)
 entry_qty.grid(row=4, column=1, padx=10, pady=5, sticky="ew")
 
-tk.Label(root, text="unit_price:").grid(row=4, column=2, sticky="w", padx=10, pady=5)
+tk.Label(root, text="Unit Price:").grid(row=4, column=2, sticky="w", padx=10, pady=5)
 entry_unitprice = tk.Entry(root)
 entry_unitprice.grid(row=4, column=3, padx=10, pady=5, sticky="ew")
 
 total_bill_var = tk.StringVar()
-tk.Label(root, text="Total_Bill:").grid(row=4, column=4, sticky="w", padx=10, pady=5)
+tk.Label(root, text="Total Bill:").grid(row=4, column=4, sticky="w", padx=10, pady=5)
 label_totalbill = tk.Label(root, textvariable=total_bill_var, bg="lightgreen", relief="sunken", anchor="w",
                            font=("Arial", 10, "bold"))
 label_totalbill.grid(row=4, column=5, padx=10, pady=5, sticky="ew")
